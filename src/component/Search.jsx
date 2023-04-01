@@ -2,11 +2,10 @@ import React from 'react'
 import axios from 'axios'
 import './Search.css'
 
-
-  function Search({
-    setWeatherDetails
-  }) {
-  const [Search, setSearch] = React.useState('')
+function Search({
+  setWeatherDetails
+}) {
+  const [search, setSearch] = React.useState('')
 
   function handleInput(e) {
     setWeatherDetails(null)
@@ -16,26 +15,26 @@ import './Search.css'
   function handleKeyDown(e) {
     if (e.key === 'Enter') {
 
-
-     const options = {
-      method: 'GET',
-      url: 'https://weatherapi-com.p.rapidapi.com/current.json',
-      params: {q: 'Search'},
-      headers: {
-       'X-RapidAPI-Key': '1c9fde519cmsh580044b1bb3e842p120f3ejsn9238a9b7db1e',
-       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-       }  
+      const options = {
+        method: 'GET',
+        url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+        params: {q: search},
+        headers: {
+          'X-RapidAPI-Key': 'b20d47f0d4msh3982d9642dd13c8p1e58f7jsn550814414a33',
+          'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        }
       };
-
+      
       axios.request(options).then(function (response) {
-	    console.log(response.data);
+        setWeatherDetails(response.data)
       }).catch(function (error) {
         alert('Please enter a valid city name')
-	    console.error(error);
+        console.error(error);
       });
-    }
 
+    }
   }
+
   return (
     <div className='search-section'>
         <div className="search-container">

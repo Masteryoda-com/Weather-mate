@@ -2,7 +2,9 @@ import React from 'react'
 import './WeatherCard.css'
 import WeatherCloudy from '../assets/weather-cloudy.png'
 
-function WeatherCard({weatherDetails}) {
+function WeatherCard({
+    weatherDetails
+}) {
   return (
     <div className='weather-section'>
         <div className='weather-card'>
