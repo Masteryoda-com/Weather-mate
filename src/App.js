@@ -7,7 +7,7 @@ import WeatherCard from './component/WeatherCard';
 
 function App() {
 
-  const [weatherDetails, setWeatherdetails] = React.useState(null);
+  const [weatherDetails, setWeatherDetails] = React.useState(null);
 
   return (
     <div className="App">
