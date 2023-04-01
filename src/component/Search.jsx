@@ -6,7 +6,7 @@ import './Search.css'
   function Search({
     setWeatherDetails
   }) {
-  const [search, setSearch] = React.useState('')
+  const [Search, setSearch] = React.useState('')
 
   function handleinput(e) {
     setWeatherDetails(null)
