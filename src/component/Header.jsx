@@ -4,7 +4,7 @@ import './Header.css'
 function Header() {
   return (
     <header className='header'>
-        <h1>Weather-Mate 🌤️</h1>
+        <h1>Weather-Mate </h1>
     </header>
   )
 }
