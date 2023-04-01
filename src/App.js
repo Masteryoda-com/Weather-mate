@@ -6,15 +6,14 @@ import WeatherCard from './component/WeatherCard';
 
 function App() {
 
-  const [weatherDetails, setWeatherdetails] = react.useState(null);
-
-  console.log(weatherDetails);
+  const [weatherDetails, setWeatherdetails] = React.useState(null);
 
   return (
     <div className="App">
       <Header />
       <Search setWeatherDetails={setWeatherDetails} />
-      {weatherDetails !== null ? <WeatherCard weatherDetails={weatherDetails} /> :null 
+      {
+      weatherDetails !== null ? <WeatherCard weatherDetails={weatherDetails} /> :null 
       }
       
       <Footer />
