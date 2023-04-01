@@ -2,6 +2,35 @@ import React from 'react'
 import './Search.css'
 
 function Search() {
+  const [search, setSearch] = React.useState('')
+
+  function handleinput(e) {
+    setWeatherDetails(null)
+    setSearch(e.target.value)
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+
+
+     const options = {
+      method: 'GET',
+      url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+      params: {q: 'Search'},
+      headers: {
+       'X-RapidAPI-Key': '1c9fde519cmsh580044b1bb3e842p120f3ejsn9238a9b7db1e',
+       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+       }  
+      };
+
+      axios.request(options).then(function (response) {
+	    console.log(response.data);
+      }).catch(function (error) {
+	    console.error(error);
+      });
+    }
+
+  }
   return (
     <div className='search-section'>
         <div className="search-container">

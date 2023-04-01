@@ -2,28 +2,24 @@ import React from 'react'
 import './WeatherCard.css'
 import WeatherCloudy from '../assets/weather-cloudy.png'
 
-function WeatherCard() {
+function WeatherCard({weatherDetails}) {
   return (
     <div className='weather-section'>
         <div className='weather-card'>
             <div className='weather-temp-c'>
-                38<sup>o</sup>
-            </div>
-            <div className="sunnyday">
-                SunnyDay
+                {weatherDetails.current.temp_c}<sup>o</sup>
             </div>
             <div className='weather-info'>
                 <span>
-                    🌈 57
+                    🌈 {weatherDetails.current.humidity}
                 </span>
                 <span>
-                    🌥️ 38
+                    🌥️ {weatherDetails.current.cloud}
                 </span>
             </div>
             <div className="weather-place">
-                Tirupati, Andhra Pradesh, India
+                {weatherDetails.location.name}, {weatherDetails.location.region}, {weatherDetails.location.country}
             </div>
-            <p>Tip : wear cotton cloths and apply Sunscreen lotion</p>
             <div className="weather-avatar">
                 <img src={WeatherCloudy} alt="" />
             </div>

@@ -5,11 +5,18 @@ import Search from './component/Search';
 import WeatherCard from './component/WeatherCard';
 
 function App() {
+
+  const [weatherDetails, setWeatherdetails] = react.useState(null);
+
+  console.log(weatherDetails);
+
   return (
     <div className="App">
       <Header />
-      <Search />
-      <WeatherCard />
+      <Search setWeatherDetails={setWeatherDetails} />
+      {weatherDetails !== null ? <WeatherCard weatherDetails={weatherDetails} /> :null 
+      }
+      
       <Footer />
     </div>
   );
