@@ -8,7 +8,7 @@ import './Search.css'
   }) {
   const [Search, setSearch] = React.useState('')
 
-  function handleinput(e) {
+  function handleInput(e) {
     setWeatherDetails(null)
     setSearch(e.target.value)
   }
