@@ -13,10 +13,10 @@ function WeatherCard({
             </div>
             <div className='weather-info'>
                 <span>
-                    🌈 {weatherDetails.current.humidity}
+                     {weatherDetails.current.humidity}
                 </span>
                 <span>
-                    🌥️ {weatherDetails.current.cloud}
+                     {weatherDetails.current.cloud}
                 </span>
             </div>
             <div className="weather-place">
