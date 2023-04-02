@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import './Search.css'
 
+console.log(process.env.API_KEY)
+
 function Search({
   setWeatherDetails
 }) {
